@@ -36,3 +36,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Your code to run since DOM is loaded and ready
 });
+
+// Active Link Index
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkColor() {
+    navLink.forEach(link => link.classList.remove('active-link'))
+    this.classList.add('active-link')
+}
+navLink.forEach(link => link.addEventListener('click', linkColor));
