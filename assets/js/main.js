@@ -45,3 +45,24 @@ function linkColor() {
     this.classList.add('active-link')
 }
 navLink.forEach(link => link.addEventListener('click', linkColor));
+
+// Sidebar Toggle
+(function ($) {
+
+    "use strict";
+
+    var fullHeight = function () {
+
+        $('.js-fullheight').css('height', $(window).height());
+        $(window).resize(function () {
+            $('.js-fullheight').css('height', $(window).height());
+        });
+
+    };
+    fullHeight();
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+})(jQuery);
